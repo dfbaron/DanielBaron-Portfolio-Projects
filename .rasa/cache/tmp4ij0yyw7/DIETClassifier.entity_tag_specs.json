@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-dec_percentage",
+      "2": "I-dec_percentage",
+      "3": "L-dec_percentage",
+      "4": "U-dec_percentage",
+      "5": "B-inc_percentage",
+      "6": "I-inc_percentage",
+      "7": "L-inc_percentage",
+      "8": "U-inc_percentage",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-dec_percentage": 1,
+      "I-dec_percentage": 2,
+      "L-dec_percentage": 3,
+      "U-dec_percentage": 4,
+      "B-inc_percentage": 5,
+      "I-inc_percentage": 6,
+      "L-inc_percentage": 7,
+      "U-inc_percentage": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

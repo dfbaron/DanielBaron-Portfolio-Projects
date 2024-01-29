@@ -1,0 +1,34 @@
+version: '3'
+services:
+  rasa-ui:
+    build: 
+      context: .
+    container_name: rasa-ui
+    volumes:
+      - ./What-If-Chatbot/RasaUI:/What-If-Chatbot/RasaUI
+      - /What-If-Chatbot/RasaUI/node_modules
+    command:
+      - npm start
+  rasa:
+    container_name: rasa-server
+    image: rasa/rasa:3.2.1
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command:
+      - run
+      - --cors
+      - "*"
+      - --enable-api
+      - --log-file
+      - out.log
+    depends_on:
+      - action-server
+  action-server:
+    container_name: rasa-action-server
+    image: rasa/rasa-sdk:3.2.0
+    volumes:
+      - ./actions:/app/actions
+    ports:
+      - "5055:5055" 
