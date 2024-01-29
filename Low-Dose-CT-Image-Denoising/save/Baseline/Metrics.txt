@@ -1,0 +1,10 @@
+Original
+PSNR avg 21.6048
+SSIM avg 0.8017
+RMSE avg 34.1898
+After learning
+PSNR avg 10.2259
+SSIM avg 0.5750
+RMSE avg 124.2412
+
+Execution time: 37511.4s

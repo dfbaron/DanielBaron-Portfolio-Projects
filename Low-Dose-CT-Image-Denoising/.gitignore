@@ -1,0 +1,8 @@
+*.ckpt
+*.npy
+*.jpg
+*.png
+paper_imgs/*
+*.IMA
+*.xlsx
+__pycache__/*

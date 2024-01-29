@@ -1,0 +1,2 @@
+print('Original\nPSNR avg: {:.4f} \nSSIM avg: {:.4f} \nRMSE avg: {:.4f}'.format(21.6048, 0.8017, 34.1898))
+print('After learning\nPSNR avg: {:.4f} \nSSIM avg: {:.4f} \nRMSE avg: {:.4f}'.format(22.3245, 0.7054, 123.7462))
