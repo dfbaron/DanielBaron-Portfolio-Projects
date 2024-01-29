@@ -1,0 +1,29 @@
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/login" routerLinkActive="active" *ngIf="!usuarioService.loggedIn">
+        <img src="../../assets/kisspng-logo-yelp-computer-icons-brand-clip-art-5b55fd02195f44.9886354115323619861039.png" width="70" height="auto" alt="">  Recommendations</a>
+      <a class="navbar-brand" routerLink="/usuario" routerLinkActive="active" *ngIf="usuarioService.loggedIn">
+        <img src="../../assets/kisspng-logo-yelp-computer-icons-brand-clip-art-5b55fd02195f44.9886354115323619861039.png" width="70" height="auto" alt="">  Recommendations</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/usuario" routerLinkActive="active" *ngIf="usuarioService.loggedIn">Datos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="/recomendaciones" routerLinkActive="active" *ngIf="usuarioService.loggedIn">Recomendaciones</a>
+            </li>
+        </ul>
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-secondary me-md-2" type="button" routerLink="/login" routerLinkActive="active" *ngIf="!usuarioService.loggedIn"> Log In</button>
+        <button class="btn btn-danger" type="button" (click)="logout()" routerLink="/login" routerLinkActive="active" *ngIf="usuarioService.loggedIn" >Log Out</button>
+      </div>
+
+    </div>
+  </nav>

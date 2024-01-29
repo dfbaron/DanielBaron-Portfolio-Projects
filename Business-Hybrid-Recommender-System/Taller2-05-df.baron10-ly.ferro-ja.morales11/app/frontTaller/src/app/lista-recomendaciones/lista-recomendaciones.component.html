@@ -1,0 +1,61 @@
+<br>
+<h2>Recomendaciones</h2>
+<br>
+
+
+
+<br>
+<h4>Usuarios Importantes</h4>
+<br>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div *ngFor="let user of usersImportantes" class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{user["name"]}}</h5>
+        <p class="card-text"><strong>Review count:</strong> {{user["review_count"]}}</p>
+        <p class="card-text"><strong>Yelping since:</strong> {{user["yelping_since"]}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<h4>Features Importantes</h4>
+<br>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div *ngFor="let feature of features" class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{feature}}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<h4>Recomendaciones</h4>
+<br>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    <div *ngFor="let recomendacion of recomendaciones" class="col">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{recomendacion["name"]}}</h5>
+          <p class="card-text"><strong>address:</strong> {{recomendacion["address"]}}</p>
+          <p class="card-text"><strong>city:</strong> {{recomendacion["city"]}}</p>
+          <p class="card-text"><strong>state:</strong> {{recomendacion["state"]}}</p>
+          <p class="card-text"><strong>Review stars predicted:</strong> {{recomendacion["review_stars_predicted"]}}</p>
+          <p class="card-text"><strong>Latitude:</strong> {{recomendacion["latitude"]}}</p>
+          <p class="card-text"><strong>Longitude:</strong> {{recomendacion["longitude"]}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div [innerHTML]="safeHtml">
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+*.ckpt
+*.npy
+*.jpg
+*.png
+paper_imgs/*
+*.IMA
+*.xlsx
+*.json
+*.pkl
+*.csv
+__pycache__/*

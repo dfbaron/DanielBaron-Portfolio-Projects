@@ -1,0 +1,11 @@
+<br>
+<h2>Login</h2>
+<br>
+<form name="idusuario" (ngSubmit)="login()">
+    <div class="mb-3">
+      <label for="id" class="form-label">ID</label>
+      <input type="text" class="form-control" id="idUser" [(ngModel)]="usuarioService.idLogged" name="usuarioId" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
