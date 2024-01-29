@@ -1,0 +1,4 @@
+*.pt
+*.model
+tests/
+src/recomendador/modules/__pycache__
