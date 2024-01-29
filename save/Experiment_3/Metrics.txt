@@ -1,0 +1,9 @@
+Original
+PSNR avg: 21.6048
+SSIM avg: 0.8017
+RMSE avg: 34.1898
+After learning
+PSNR avg: 20.3784
+SSIM avg: 0.7113
+RMSE avg: 38.4763
+
