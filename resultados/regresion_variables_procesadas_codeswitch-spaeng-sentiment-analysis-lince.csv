@@ -1,0 +1,9 @@
+,Model,RMSE
+4,Linear Regression,0.15743280160704232
+5,Support Vector Regression,0.1605026970833838
+6,Random Forest Regression,0.16108589492019743
+3,Ridge Regression,0.16446409102388426
+2,Lasso Regression,0.18395772461205437
+1,Gradient Boosting Trees Regression,0.2034569655843366
+0,k-Nearest-Neighbors Regression,0.20361850069961837
+7,MLP Regression,0.5404237792004363
