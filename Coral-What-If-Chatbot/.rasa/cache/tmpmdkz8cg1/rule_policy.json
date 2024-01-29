@@ -1,0 +1,63 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fast_task\"}}]": "fast_task_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fast_task\"}}, {\"prev_action\": {\"action_name\": \"fast_task_form\"}, \"user\": {\"intent\": \"fast_task\"}}]": "action_fast_task",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fast_task\"}}, {\"prev_action\": {\"action_name\": \"fast_task_form\"}, \"user\": {\"intent\": \"fast_task\"}}, {\"prev_action\": {\"action_name\": \"action_fast_task\"}, \"user\": {\"intent\": \"fast_task\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"decrease_demand\"}}]": "action_decrease_demand",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"decrease_demand\"}}, {\"prev_action\": {\"action_name\": \"action_decrease_demand\"}, \"user\": {\"intent\": \"decrease_demand\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"add_resources\"}}]": "add_resources_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"add_resources\"}}, {\"prev_action\": {\"action_name\": \"add_resources_form\"}, \"user\": {\"intent\": \"add_resources\"}}]": "action_add_resources",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"add_resources\"}}, {\"prev_action\": {\"action_name\": \"add_resources_form\"}, \"user\": {\"intent\": \"add_resources\"}}, {\"prev_action\": {\"action_name\": \"action_add_resources\"}, \"user\": {\"intent\": \"add_resources\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greeting\"}}]": "utter_greeting",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greeting\"}}, {\"prev_action\": {\"action_name\": \"utter_greeting\"}, \"user\": {\"intent\": \"greeting\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"slow_task\"}}]": "slow_task_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"slow_task\"}}, {\"prev_action\": {\"action_name\": \"slow_task_form\"}, \"user\": {\"intent\": \"slow_task\"}}]": "action_slow_task",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"slow_task\"}}, {\"prev_action\": {\"action_name\": \"slow_task_form\"}, \"user\": {\"intent\": \"slow_task\"}}, {\"prev_action\": {\"action_name\": \"action_slow_task\"}, \"user\": {\"intent\": \"slow_task\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"change_resources\"}}]": "change_resources_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"change_resources\"}}, {\"prev_action\": {\"action_name\": \"change_resources_form\"}, \"user\": {\"intent\": \"change_resources\"}}]": "action_change_resources",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"change_resources\"}}, {\"prev_action\": {\"action_name\": \"change_resources_form\"}, \"user\": {\"intent\": \"change_resources\"}}, {\"prev_action\": {\"action_name\": \"action_change_resources\"}, \"user\": {\"intent\": \"change_resources\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"increase_demand\"}}]": "action_increase_demand",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"increase_demand\"}}, {\"prev_action\": {\"action_name\": \"action_increase_demand\"}, \"user\": {\"intent\": \"increase_demand\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"slow_task_form\"}, \"prev_action\": {\"action_name\": \"slow_task_form\"}, \"user\": {\"intent\": \"slow_task\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"slow_task_form\"}}, {\"active_loop\": {\"name\": \"slow_task_form\"}, \"prev_action\": {\"action_name\": \"action_slow_task\"}, \"user\": {\"intent\": \"slow_task\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"slow_task_form\"}, \"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"add_resources_form\"}, \"prev_action\": {\"action_name\": \"add_resources_form\"}, \"user\": {\"intent\": \"add_resources\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"add_resources_form\"}}, {\"active_loop\": {\"name\": \"add_resources_form\"}, \"prev_action\": {\"action_name\": \"action_add_resources\"}, \"user\": {\"intent\": \"add_resources\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"add_resources_form\"}, \"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"fast_task_form\"}, \"prev_action\": {\"action_name\": \"fast_task_form\"}, \"user\": {\"intent\": \"fast_task\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"fast_task_form\"}}, {\"active_loop\": {\"name\": \"fast_task_form\"}, \"prev_action\": {\"action_name\": \"action_fast_task\"}, \"user\": {\"intent\": \"fast_task\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"fast_task_form\"}, \"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"change_resources_form\"}, \"prev_action\": {\"action_name\": \"change_resources_form\"}, \"user\": {\"intent\": \"change_resources\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"change_resources_form\"}}, {\"active_loop\": {\"name\": \"change_resources_form\"}, \"prev_action\": {\"action_name\": \"action_change_resources\"}, \"user\": {\"intent\": \"change_resources\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"change_resources_form\"}, \"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fast_task\"}}, {\"prev_action\": {\"action_name\": \"fast_task_form\"}, \"user\": {\"intent\": \"fast_task\"}}, {\"prev_action\": {\"action_name\": \"action_fast_task\"}, \"user\": {\"intent\": \"fast_task\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"fast_task\"}}, {\"prev_action\": {\"action_name\": \"fast_task_form\"}, \"user\": {\"intent\": \"fast_task\"}}]",
+      "handling active loops and forms - change_resources_form",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"change_resources\"}}, {\"prev_action\": {\"action_name\": \"change_resources_form\"}, \"user\": {\"intent\": \"change_resources\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"add_resources\"}}, {\"prev_action\": {\"action_name\": \"add_resources_form\"}, \"user\": {\"intent\": \"add_resources\"}}, {\"prev_action\": {\"action_name\": \"action_add_resources\"}, \"user\": {\"intent\": \"add_resources\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"slow_task\"}}, {\"prev_action\": {\"action_name\": \"slow_task_form\"}, \"user\": {\"intent\": \"slow_task\"}}, {\"prev_action\": {\"action_name\": \"action_slow_task\"}, \"user\": {\"intent\": \"slow_task\"}}]",
+      "predicting default action with intent restart",
+      "handling active loops and forms - add_resources_form - action_listen",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"change_resources\"}}, {\"prev_action\": {\"action_name\": \"change_resources_form\"}, \"user\": {\"intent\": \"change_resources\"}}, {\"prev_action\": {\"action_name\": \"action_change_resources\"}, \"user\": {\"intent\": \"change_resources\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"add_resources\"}}, {\"prev_action\": {\"action_name\": \"add_resources_form\"}, \"user\": {\"intent\": \"add_resources\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"slow_task\"}}, {\"prev_action\": {\"action_name\": \"slow_task_form\"}, \"user\": {\"intent\": \"slow_task\"}}]",
+      "handling active loops and forms - slow_task_form",
+      "handling active loops and forms - slow_task_form - action_listen",
+      "handling active loops and forms - fast_task_form",
+      "handling active loops and forms - add_resources_form",
+      "handling active loops and forms - change_resources_form - action_listen",
+      "handling active loops and forms - fast_task_form - action_listen"
+    ]
+  }
+}

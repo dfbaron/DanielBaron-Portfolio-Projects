@@ -1,0 +1,513 @@
+version: "3.1"
+
+intents:
+- greeting
+- goodbye
+- increase_demand
+- decrease_demand
+- add_resources:
+    use_entities: []
+- change_resources:
+    use_entities: []
+- fast_task:
+    use_entities: []
+- slow_task:
+    use_entities: []
+- remove_resources:
+    use_entities: []
+- create_working_time:
+    use_entities: []
+- modify_working_time:
+    use_entities: []
+- automate_task:
+    use_entities: []
+- compare_scenarios:
+    use_entities: []
+- help
+
+entities:
+- inc_percentage
+- dec_percentage
+
+slots:
+
+  add_resource_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: add_resources_form
+          requested_slot: add_resource_name
+  add_resource_amount:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: add_resources_form
+          requested_slot: add_resource_amount
+  add_resource_cost:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: add_resources_form
+          requested_slot: add_resource_cost
+  add_resource_time_table:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: add_resources_form
+          requested_slot: add_resource_time_table
+  add_resource_new_role:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: add_resources_form
+          requested_slot: add_resource_new_role
+  
+  change_resources_role_modify:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: change_resources_form
+          requested_slot: change_resources_role_modify
+  change_resources_new_amount:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: change_resources_form
+          requested_slot: change_resources_new_amount
+  change_resources_new_cost:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: change_resources_form
+          requested_slot: change_resources_new_cost
+
+  fast_task_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: fast_task_form
+          requested_slot: fast_task_name
+  fast_task_percentage:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: fast_task_form
+          requested_slot: fast_task_percentage
+
+  slow_task_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: slow_task_form
+          requested_slot: slow_task_name
+  slow_task_percentage:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: slow_task_form
+          requested_slot: slow_task_percentage
+
+  remove_resources_role:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: remove_resources_form
+          requested_slot: remove_resources_role
+  remove_resources_transfer_role:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: remove_resources_form
+          requested_slot: remove_resources_transfer_role
+          
+  create_working_time_id:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_id
+  create_working_time_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_name
+  create_working_time_from_time:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_from_time
+  create_working_time_to_time:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_to_time
+  create_working_time_from_weekday:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_from_weekday
+  create_working_time_to_weekday:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_to_weekday
+  create_working_time_resource:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: create_working_time_form
+          requested_slot: create_working_time_resource
+
+  modify_working_time_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: modify_working_time_form
+          requested_slot: modify_working_time_name
+  modify_working_time_from_time:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: modify_working_time_form
+          requested_slot: modify_working_time_from_time
+  modify_working_time_to_time:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: modify_working_time_form
+          requested_slot: modify_working_time_to_time
+  modify_working_time_from_weekday:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: modify_working_time_form
+          requested_slot: modify_working_time_from_weekday
+  modify_working_time_to_weekday:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: modify_working_time_form
+          requested_slot: modify_working_time_to_weekday
+
+  automate_task_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: automate_task_form
+          requested_slot: automate_task_name
+  automate_task_percentage:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: automate_task_form
+          requested_slot: automate_task_percentage
+  more_information:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: more_information_form
+          requested_slot: more_information
+  comparison_scenario:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  name_scenario:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  compared_scenarios:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: compare_scenarios_form
+          requested_slot: compared_scenarios
+  compared_scenario_names:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  model:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      conditions:
+        - active_loop: choose_model_form
+          requested_slot: model
+  
+
+responses:
+  utter_greeting:
+  - text: Hello! I am Coral, Conversational What If Process Analysis chatbot. Which what-if scenario do you want to create?
+  utter_goodbye:
+  - text: See you later, thanks for use Coral.
+  utter_ask_more_information:
+  - text: Do you want to know additional performance metrics?
+  
+  utter_ask_add_resource_name:
+  - text: Indicate the name of the resource
+  utter_ask_add_resource_amount:
+  - text: Indicate the number of resources
+  utter_ask_add_resource_cost:
+  - text: Indicate the cost per hour of the resource
+  utter_wrong_add_resource_name:
+  - text: Please enter a name that is not currently a role name.
+  utter_wrong_add_resource_time_table:
+  - text: Please enter a valid option for timetable for the new role.
+  utter_wrong_add_resource_amount:
+  - text: Please enter a valid option for number of resources.
+  utter_wrong_add_resource_cost:
+  - text: Please enter a valid option for resource cost per hour.
+  utter_wrong_add_resource_new_role:
+  - text: Please enter a valid option for the assigning of new role.
+
+  utter_wrong_change_resources_role_modify:
+  - text: Please enter a valid role name.
+  utter_ask_change_resources_new_amount:
+  - text: Please define the number of resources.
+  utter_wrong_change_resources_new_amount:
+  - text: Please enter a valid option for number of resources.
+  utter_ask_change_resources_new_cost:
+  - text: Please define the cost per hour
+  utter_wrong_change_resources_new_cost:
+  - text: Please enter a valid option for the cost per hour
+
+  utter_wrong_fast_task_name:
+  - text: Please enter a valid task name.
+  utter_ask_fast_task_percentage:
+  - text: In what percentage?
+  utter_wrong_fast_task_percentage:
+  - text: Please enter a valid value for percentage (0-100).
+
+  utter_wrong_slow_task_name:
+  - text: Please enter a valid task name.
+  utter_ask_slow_task_percentage:
+  - text: In what percentage?
+  utter_wrong_slow_task_percentage:
+  - text: Please enter a valid value for percentage (0-100).
+
+  utter_wrong_remove_resources_role:
+  - text: Please enter a valid resource name.
+  utter_wrong_remove_resources_transfer_role:
+  - text: Please enter a valid resource name.
+  
+  utter_ask_create_working_time_id:
+  - text: Enter the Id for the new timetable.
+  utter_wrong_create_working_time_id:
+  - text: Please enter a valid option for Id.
+  utter_ask_create_working_time_name:
+  - text: Enter the Name for the new timetable.
+  utter_wrong_create_working_time_name:
+  - text: Please enter a valid option for name.
+  utter_ask_create_working_time_from_time:
+  - text: Enter the initial time for the rule (HH:MM:SS)
+  utter_wrong_create_working_time_from_time:
+  - text: Please enter a valid initial time for the rule.
+  utter_ask_create_working_time_to_time:
+  - text: Enter the final time for the rule (HH:MM:SS).
+  utter_wrong_create_working_time_to_time:
+  - text: Please enter a valid final time for the rule.
+  utter_ask_create_working_time_from_weekday:
+  - text: Enter the initial day of week for the rule.
+  utter_wrong_create_working_time_from_weekday:
+  - text: Please enter a valid weekday for the rule.
+  utter_ask_create_working_time_to_weekday:
+  - text: Enter the final day of week for the rule.
+  utter_wrong_create_working_time_to_weekday:
+  - text: Please enter a valid weekday for the rule
+  utter_wrong_create_working_time_resource:
+  - text: Please enter a valid resource name.
+
+  utter_wrong_modify_working_time_name:
+  - text: Please enter a valid option for name.
+  utter_ask_modify_working_time_from_time:
+  - text: Enter the initial time for the rule (HH:MM:SS)
+  utter_wrong_modify_working_time_from_time:
+  - text: Please enter a valid initial time for the rule.
+  utter_ask_modify_working_time_to_time:
+  - text: Enter the final time for the rule (HH:MM:SS).
+  utter_wrong_modify_working_time_to_time:
+  - text: Please enter a valid final time for the rule.
+  utter_ask_modify_working_time_from_weekday:
+  - text: Enter the initial day of week for the rule.
+  utter_wrong_modify_working_time_from_weekday:
+  - text: Please enter a valid weekday for the rule.
+  utter_ask_modify_working_time_to_weekday:
+  - text: Enter the final day of week for the rule.
+  utter_wrong_modify_working_time_to_weekday:
+  - text: Please enter a valid weekday for the rule
+
+  utter_wrong_automate_task_name:
+  - text: Please enter a valid task name.
+  utter_ask_automate_task_percentage:
+  - text: What is the percentage of automation?
+  utter_wrong_automate_task_percentage:
+  - text: Please enter a valid option for percentage of automation.
+
+  utter_wrong_compared_scenarios:
+  - text: Please enter a valid id for comparison scenarios.
+
+actions:
+- action_increase_demand
+- action_decrease_demand
+- validate_add_resources_form
+- action_add_resources
+- validate_change_resources_form
+- action_change_resources
+- validate_fast_task_form
+- action_fast_task
+- validate_slow_task_form
+- action_slow_task
+- validate_remove_resources_form
+- action_remove_resources
+- validate_create_working_time_form
+- action_create_working_time
+- validate_modify_working_time_form
+- action_modify_working_time
+- validate_automate_task_form
+- action_automate_task
+- action_more_information
+- validate_compare_scenarios_form
+- action_compare_scenarios
+- action_ask_add_resource_time_table
+- action_ask_add_resource_new_role
+- action_ask_change_resources_role_modify
+- action_ask_fast_task_name
+- action_ask_slow_task_name
+- action_ask_remove_resources_role
+- action_ask_remove_resources_transfer_role
+- action_ask_create_working_time_resource
+- action_ask_modify_working_time_name
+- action_ask_automate_task_name
+- action_ask_compared_scenarios
+- action_ask_model
+- validate_choose_model_form
+- action_help
+
+forms:
+  add_resources_form:
+    required_slots:
+      - add_resource_name
+      - add_resource_amount
+      - add_resource_cost
+      - add_resource_time_table
+      - add_resource_new_role
+  change_resources_form:
+    required_slots:
+      - change_resources_role_modify
+      - change_resources_new_amount
+      - change_resources_new_cost
+  fast_task_form:
+    required_slots:
+      - fast_task_name
+      - fast_task_percentage
+  slow_task_form:
+    required_slots:
+      - slow_task_name
+      - slow_task_percentage
+  remove_resources_form:
+    required_slots:
+      - remove_resources_role
+      - remove_resources_transfer_role
+  create_working_time_form:
+    required_slots:
+      - create_working_time_id
+      - create_working_time_name
+      - create_working_time_from_time
+      - create_working_time_to_time
+      - create_working_time_from_weekday
+      - create_working_time_to_weekday
+      - create_working_time_resource
+  modify_working_time_form:
+    required_slots:
+      - modify_working_time_name
+      - modify_working_time_from_time
+      - modify_working_time_to_time
+      - modify_working_time_from_weekday
+      - modify_working_time_to_weekday
+  automate_task_form:
+    required_slots:
+      - automate_task_name
+      - automate_task_percentage
+  more_information_form:
+    required_slots:
+      - more_information
+  compare_scenarios_form:
+    required_slots:
+      - compared_scenarios
+  choose_model_form:
+    required_slots:
+      - model
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

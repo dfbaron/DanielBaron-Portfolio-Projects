@@ -1,0 +1,4 @@
+Collecting tensorboard-plugin-wit
+  Using cached tensorboard_plugin_wit-1.8.1-py3-none-any.whl (781 kB)
+Installing collected packages: tensorboard-plugin-wit
+Successfully installed tensorboard-plugin-wit-1.8.1

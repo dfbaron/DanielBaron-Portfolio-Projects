@@ -1,0 +1,179 @@
+version: "3.1"
+
+stories:
+- story: happy path
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+
+- story: help
+  steps:
+  - intent: help
+  - action: action_help
+
+- story: 10 percentage increase demand
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: increase_demand
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: action_increase_demand
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: 50 percentage decrease demand
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: decrease_demand
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: action_decrease_demand
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: add resources
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: add_resources
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: add_resources_form
+  - active_loop: add_resources_form
+  - action: action_add_resources
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: change resources
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: change_resources
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: change_resources_form
+  - active_loop: change_resources_form
+  - action: action_change_resources
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: fast task
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: fast_task
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: fast_task_form
+  - active_loop: fast_task_form
+  - action: action_fast_task
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: slow task
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: slow_task
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: slow_task_form
+  - active_loop: slow_task_form
+  - action: action_slow_task
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: remove resources
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: remove_resources
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: remove_resources_form
+  - active_loop: remove_resources_form
+  - action: action_remove_resources
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: create working times
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: create_working_time
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: create_working_time_form
+  - active_loop: create_working_time_form
+  - action: action_create_working_time
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: modify working times
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: modify_working_time
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: modify_working_time_form
+  - active_loop: modify_working_time_form
+  - action: action_modify_working_time
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: automate task
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: automate_task
+  - action: choose_model_form
+  - active_loop: choose_model_form
+  - action: automate_task_form
+  - active_loop: automate_task_form
+  - action: action_automate_task
+  - action: more_information_form
+  - active_loop: more_information_form
+  - action: action_more_information
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: compare scenarios
+  steps:
+  - intent: greeting
+  - action: utter_greeting
+  - intent: compare_scenarios
+  - action: compare_scenarios_form
+  - active_loop: compare_scenarios_form
+  - action: action_compare_scenarios
+  - intent: goodbye
+  - action: utter_goodbye
